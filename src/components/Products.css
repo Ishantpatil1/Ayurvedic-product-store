@@ -1,0 +1,83 @@
+.products {
+  padding: 60px 20px;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.products h2 {
+  color: #33691e;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden; /* keep image inside */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Use aspect-ratio to preserve 9:16 image ratio */
+.book-image {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .book-image {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.card h3 {
+  color: #2e7d32;
+  margin: 10px 0;
+}
+
+.card p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.card button {
+  margin-top: 10px;
+  background-color: #8bc34a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #689f38;
+}

@@ -1,0 +1,111 @@
+/* About Section */
+.about {
+  padding: 60px 20px;
+  background: #f0f4c3;
+  text-align: center;
+}
+
+.about h2 {
+  color: #558b2f;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #33691e;
+}
+
+/* Products Section */
+.products {
+  padding: 60px 20px;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.products h2 {
+  color: #33691e;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* smaller cards */
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 1200px; /* max width to center container */
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden; /* keep image inside */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px; /* limit max width */
+  margin: 0 auto; /* center card */
+  padding: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Image with 9:16 aspect ratio */
+.book-image {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .book-image {
+  transform: scale(1.05);
+}
+
+/* Card content */
+.card-body {
+  padding: 15px 0 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.card h3 {
+  color: #2e7d32;
+  margin: 10px 0;
+  font-size: 1.3rem; /* increased font size */
+}
+
+.card p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 1.1rem; /* increased font size */
+}
+
+.card button {
+  margin-top: 12px;
+  background-color: #8bc34a;
+  color: white;
+  border: none;
+  padding: 12px 25px; /* larger button */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem; /* larger text */
+}
+
+.card button:hover {
+  background-color: #689f38;
+}
