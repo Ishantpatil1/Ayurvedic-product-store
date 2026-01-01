@@ -17,18 +17,18 @@
 }
 
 .contact-header .section-title {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-family: var(--font-heading);
   color: var(--color-primary-dark);
   margin-bottom: var(--spacing-sm);
 }
 
 .contact-header .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--color-text-medium);
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 /* Contact Content */
@@ -42,13 +42,13 @@
 /* Feedback Section */
 .feedback-section {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 420px;
+  min-height: 320px;
   position: relative;
   overflow: hidden;
 }
@@ -73,33 +73,33 @@
 }
 
 .feedback-icon {
-  font-size: 5rem;
-  margin-bottom: var(--spacing-lg);
+  font-size: 2.8rem;
+  margin-bottom: var(--spacing-sm);
   display: block;
   animation: bounce 2s ease-in-out infinite;
 }
 
 .feedback-card h3 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: var(--color-bg-light);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   font-family: var(--font-heading);
 }
 
 .feedback-card p {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.95);
-  line-height: 1.7;
-  margin-bottom: var(--spacing-lg);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
 }
 
 .btn-feedback {
   background: var(--color-secondary);
   color: var(--color-primary);
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem;
   border: none;
   border-radius: var(--radius-md);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-medium);
@@ -123,11 +123,11 @@
 
 .info-card {
   background: var(--color-bg-light);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-medium);
-  border-left: 5px solid var(--color-primary);
+  border-left: 4px solid var(--color-primary);
   position: relative;
   overflow: hidden;
   animation: slideInRight 0.6s ease-out;
@@ -167,43 +167,43 @@
 }
 
 .info-icon {
-  font-size: 3rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
   display: inline-block;
   animation: rotate 3s linear infinite;
 }
 
 .info-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: var(--color-primary-dark);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
   font-family: var(--font-heading);
 }
 
 .contact-detail {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--color-text-dark);
   font-weight: 600;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 
 .contact-time {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--color-text-medium);
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
   font-style: italic;
 }
 
 .btn-contact {
   background: linear-gradient(135deg, #25d366 0%, #20a85c 100%);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border: none;
   border-radius: var(--radius-sm);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
   transition: all var(--transition-medium);
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
   width: 100%;
@@ -254,7 +254,7 @@
   100% {
     transform: rotate(360deg);
   }
-}
+}{}
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;

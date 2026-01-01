@@ -17,14 +17,14 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-family: var(--font-heading);
   color: var(--color-primary-dark);
   margin-bottom: var(--spacing-sm);
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: var(--color-text-medium);
   max-width: 600px;
   margin: 0 auto;
