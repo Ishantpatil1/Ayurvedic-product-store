@@ -1,43 +1,211 @@
+/* HansrajVeda Header - Premium Ayurvedic Design */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: linear-gradient(to right, #a8e063, #56ab2f); /* vibrant green gradient */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-medium);
 }
 
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem var(--spacing-md);
+}
+
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #2e7d32;
+  cursor: pointer;
+  transition: var(--transition-fast);
 }
 
-.logo-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin-right: 10px;
+.logo:hover {
+  transform: scale(1.02);
 }
 
-nav ul {
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-bg-cream);
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+.nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #eafbe4;
+.nav ul li a {
+  color: var(--color-bg-cream);
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: var(--transition-fast);
 }
 
-nav ul li a:hover {
-  color: #70ca21;
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width var(--transition-fast);
+}
+
+.nav ul li a:hover {
+  color: var(--color-secondary-light);
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--color-bg-cream);
+  border-radius: 3px;
+  transition: all var(--transition-medium);
+}
+
+.hamburger span.open:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger span.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger span.open:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .header-container {
+    padding: 0.75rem var(--spacing-sm);
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    padding: 5rem 2rem 2rem;
+    transition: right var(--transition-medium);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+  }
+
+  .nav.nav-open {
+    right: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav ul li {
+    opacity: 0;
+  }
+
+  .nav-open ul li {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  .nav ul li:nth-child(1) { animation-delay: 0.1s; }
+  .nav ul li:nth-child(2) { animation-delay: 0.2s; }
+  .nav ul li:nth-child(3) { animation-delay: 0.3s; }
+  .nav ul li:nth-child(4) { animation-delay: 0.4s; }
+  .nav ul li:nth-child(5) { animation-delay: 0.5s; }
+
+  .nav ul li a {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.65rem var(--spacing-xs);
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .nav {
+    width: 85%;
+    max-width: none;
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .nav ul {
+    gap: 1.25rem;
+  }
+
+  .nav ul li a {
+    font-size: 1.05rem;
+  }
+
+  .hamburger {
+    padding: 0.35rem;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 2.5px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

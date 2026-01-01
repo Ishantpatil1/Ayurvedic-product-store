@@ -1,10 +1,177 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #fefdf6;
-  scroll-behavior: smooth;
+/* HansrajVeda Design System - Ayurvedic Color Palette & Typography */
+:root {
+  /* Primary Ayurvedic Colors */
+  --color-primary: #2d5016;        /* Deep forest green */
+  --color-primary-light: #4a7c29;  /* Lighter green */
+  --color-primary-dark: #1a3509;   /* Darker green */
+  
+  /* Secondary Colors */
+  --color-secondary: #d4a574;      /* Warm beige/saffron */
+  --color-secondary-light: #e8c9a1;
+  --color-secondary-dark: #a07d4f;
+  
+  /* Accent Colors */
+  --color-accent: #8b4513;         /* Earthy brown */
+  --color-accent-light: #a0652a;
+  --color-terracotta: #e07a5f;
+  
+  /* Neutral Colors */
+  --color-bg-cream: #faf8f3;
+  --color-bg-light: #ffffff;
+  --color-bg-beige: #f5f1e8;
+  --color-text-dark: #2c2c2c;
+  --color-text-medium: #5a5a5a;
+  --color-text-light: #8a8a8a;
+  
+  /* Spacing System */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(45, 80, 22, 0.08);
+  --shadow-md: 0 4px 16px rgba(45, 80, 22, 0.12);
+  --shadow-lg: 0 8px 32px rgba(45, 80, 22, 0.16);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Typography */
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Playfair Display', serif;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-cream);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-medium);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section-padding {
+  padding: var(--spacing-xl) 0;
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xs: 0.4rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2.5rem;
+  }
+
+  .section-padding {
+    padding: var(--spacing-lg) 0;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-xs: 0.35rem;
+    --spacing-sm: 0.65rem;
+    --spacing-md: 0.85rem;
+    --spacing-lg: 1.25rem;
+    --spacing-xl: 2rem;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
 }

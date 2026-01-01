@@ -1,111 +1,319 @@
-/* About Section */
-.about {
-  padding: 60px 20px;
-  background: #f0f4c3;
-  text-align: center;
+/* About Section - Premium Ayurvedic Design */
+.about-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(180deg, var(--color-bg-light) 0%, var(--color-bg-beige) 100%);
 }
 
-.about h2 {
-  color: #558b2f;
-  margin-bottom: 20px;
-}
-
-.about p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.1rem;
-  color: #33691e;
-}
-
-/* Products Section */
-.products {
-  padding: 60px 20px;
-  background-color: #fafafa;
-  text-align: center;
-}
-
-.products h2 {
-  color: #33691e;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* smaller cards */
-  gap: 20px;
-  padding: 0 20px;
-  max-width: 1200px; /* max width to center container */
+.about-container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
-.card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden; /* keep image inside */
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 280px; /* limit max width */
-  margin: 0 auto; /* center card */
-  padding: 15px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Book Image with 9:16 aspect ratio */
-.book-image {
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .book-image {
-  transform: scale(1.05);
-}
-
-/* Card content */
-.card-body {
-  padding: 15px 0 0 0;
+/* Header */
+.about-header {
   text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.about-header .section-title {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.title-decoration {
+  width: 80px;
+  height: 4px;
+  background: var(--color-secondary);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* About Content */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: 1.75rem;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-image {
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-.card h3 {
-  color: #2e7d32;
-  margin: 10px 0;
-  font-size: 1.3rem; /* increased font size */
+.image-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
 }
 
-.card p {
-  margin: 6px 0;
-  color: #555;
-  font-size: 1.1rem; /* increased font size */
+.leaf-icon {
+  font-size: 8rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-.card button {
-  margin-top: 12px;
-  background-color: #8bc34a;
-  color: white;
-  border: none;
-  padding: 12px 25px; /* larger button */
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 1.1rem; /* larger text */
+/* Philosophy Section */
+.philosophy-section {
+  margin: var(--spacing-xl) 0;
+  text-align: center;
 }
 
-.card button:hover {
-  background-color: #689f38;
+.philosophy-title {
+  font-size: 2rem;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.philosophy-card {
+  background: var(--color-bg-light);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-medium);
+  text-align: center;
+}
+
+.philosophy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.philosophy-card h4 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.philosophy-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-medium);
+}
+
+/* Promise Section */
+.promise-section {
+  background: var(--color-bg-light);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--spacing-xl);
+}
+
+.promise-section h3 {
+  font-size: 2rem;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.promise-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.promise-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-bg-beige);
+  border-radius: var(--radius-sm);
+  font-size: 1.05rem;
+  color: var(--color-text-dark);
+  font-weight: 500;
+}
+
+.check-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  color: var(--color-bg-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-image {
+    order: 1;
+  }
+
+  .image-placeholder {
+    height: 300px;
+  }
+
+  .leaf-icon {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .about-container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .about-header .section-title {
+    font-size: 1.75rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .philosophy-title {
+    font-size: 1.5rem;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .philosophy-card {
+    padding: var(--spacing-md);
+  }
+
+  .card-icon {
+    font-size: 2.75rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .promise-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .promise-section {
+    padding: var(--spacing-md);
+  }
+
+  .promise-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0 var(--spacing-xs);
+  }
+
+  .about-header .section-title {
+    font-size: 1.5rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.25rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .philosophy-title {
+    font-size: 1.35rem;
+  }
+
+  .philosophy-card {
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+  }
+
+  .card-icon {
+    font-size: 2.25rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
+
+  .image-placeholder {
+    height: 250px;
+  }
+
+  .leaf-icon {
+    font-size: 4rem;
+  }
+
+  .promise-section {
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+  }
+
+  .promise-title {
+    font-size: 1.25rem;
+  }
+
+  .promise-list {
+    gap: var(--spacing-xs);
+  }
+
+  .promise-list li {
+    font-size: 0.9rem;
+  }
 }

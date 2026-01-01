@@ -1,83 +1,228 @@
-.products {
-  padding: 60px 20px;
-  background-color: #fafafa;
+/* Products Section - Premium Ayurvedic Design */
+.products-section {
+  padding: var(--spacing-xl) 0;
+  background: var(--color-bg-light);
+}
+
+.products-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Header */
+.products-header {
   text-align: center;
+  margin-bottom: var(--spacing-xl);
 }
 
-.products h2 {
-  color: #33691e;
-  margin-bottom: 30px;
-  font-size: 2rem;
+.section-title {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-sm);
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-medium);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden; /* keep image inside */
+/* Filters */
+.products-filters {
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Use aspect-ratio to preserve 9:16 image ratio */
-.book-image {
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .book-image {
-  transform: scale(1.05);
-}
-
-.card-body {
-  padding: 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--color-bg-beige);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
 }
 
-.card h3 {
-  color: #2e7d32;
-  margin: 10px 0;
+.category-filters {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
 }
 
-.card p {
-  margin: 4px 0;
-  color: #555;
+.filter-btn {
+  padding: 0.65rem 1.5rem;
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
   font-size: 0.95rem;
-}
-
-.card button {
-  margin-top: 10px;
-  background-color: #8bc34a;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  transition: all var(--transition-fast);
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.card button:hover {
-  background-color: #689f38;
+.filter-btn:hover {
+  border-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.filter-btn.active {
+  background: var(--color-primary);
+  color: var(--color-bg-light);
+  border-color: var(--color-primary);
+}
+
+/* Sort Filter */
+.sort-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sort-filter label {
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.sort-filter select {
+  padding: 0.65rem 1rem;
+  border: 2px solid var(--color-bg-beige);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.sort-filter select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.no-products {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-text-medium);
+  padding: var(--spacing-xl);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .products-container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .products-filters {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--spacing-sm);
+  }
+
+  .category-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: var(--spacing-xs);
+  }
+
+  .category-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .sort-filter {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .sort-filter select {
+    flex: 1;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: 0 var(--spacing-xs);
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    padding: 0 var(--spacing-xs);
+  }
+
+  .products-filters {
+    padding: var(--spacing-xs);
+  }
+
+  .filter-btn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .sort-filter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-xs);
+  }
+
+  .sort-filter label {
+    font-size: 0.9rem;
+  }
+
+  .sort-filter select {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
 }
