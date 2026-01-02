@@ -4,51 +4,59 @@ import './Testimonials.css'
 const testimonials = [
   {
     id: 1,
-    name: "Priya Sharma",
-    location: "Mumbai",
+    name: "Satish Sonar",
+    location: "Customer",
     rating: 5,
-    review: "The HansrajVeda Hair Oil has completely transformed my hair! My hair fall has reduced significantly, and I can see new hair growth. Love that it's all natural and handmade!",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+    review: "The hair oil product is really really good and result oriented, it gets smoothy and silky. So all the best wishes for your great journey"
   },
   {
     id: 2,
-    name: "Rajesh Kumar",
-    location: "Delhi",
+    name: "Dr. Devashish Puri",
+    location: "Doctor",
     rating: 5,
-    review: "I purchased the Hair Care Kit and it's worth every penny! The combination of oil, shampoo, conditioner, and internal medicine has given me amazing results. Highly recommend!",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+    review: "Using your oil since a week.. have reduced dandruff and hair fall also reduced.. it actually helps me a lot for dryness.. thank you so much"
   },
   {
     id: 3,
-    name: "Ananya Desai",
-    location: "Bangalore",
+    name: "Dr. Smita More",
+    location: "Doctor",
     rating: 5,
-    review: "The Ayurvedic Face Pack is absolutely wonderful! My skin feels so fresh and glowing. It works for my sensitive skin perfectly. Thank you HansrajVeda!",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop"
+    review: "I used the Ayurvedic hair oil 2-3 times, hairfall reduced and hair became very soft. Thank you so much Dr. Shital"
   },
   {
     id: 4,
-    name: "Meera Iyer",
-    location: "Chennai",
+    name: "Mrs. Archna Charate",
+    location: "Customer",
     rating: 5,
-    review: "I used the Stretch Marks Oil during my pregnancy and it worked wonders! My skin stayed soft and healthy throughout. Safe and effective!",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop"
+    review: "The oil you gave is very beneficial. Dandruff problem reduced and hair fall also decreased. My white hair is gradually turning black. Thank you Shital madam"
   },
   {
     id: 5,
-    name: "Kavita Patel",
-    location: "Ahmedabad",
+    name: "Dr. Vaishanvi Padmvar",
+    location: "Doctor",
     rating: 5,
-    review: "Suvarna Prashan for my child has been amazing! I can see improvements in his immunity and overall health. Traditional Ayurveda at its best!",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop"
+    review: "I use the hair oil you made... in just one use hair becomes smooth and shine increased and dandruff problem is reducing. Thank you so much for such genuine product"
   },
   {
     id: 6,
-    name: "Vikram Singh",
-    location: "Pune",
+    name: "Dr. Rushikesh Wankhede",
+    location: "Doctor",
     rating: 5,
-    review: "The Hair Conditioner makes my hair so soft and manageable. Combined with their shampoo, it's the perfect natural hair care routine. No chemicals, just pure goodness!",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop"
+    review: "I've been using your hair oil for the past week. My hairfall has reduced and dryness also decreased. Thank you"
+  },
+  {
+    id: 7,
+    name: "Mrs. Kirti Pathade",
+    location: "Customer",
+    rating: 5,
+    review: "With the oil you gave, there was a lot of difference in 8 days. Dandruff and hair fall reduced. My son also had a lot of dandruff, his dandruff also reduced a lot. Very best oil"
+  },
+  {
+    id: 8,
+    name: "Miss. Lavanya Gahane",
+    location: "Customer",
+    rating: 5,
+    review: "I used the oil you sent for just 2 days but hair became smooth and hair fall also reduced a bit. Thank you"
   }
 ]
 
@@ -77,11 +85,11 @@ function Testimonials() {
               <p className="testimonial-review">"{testimonial.review}"</p>
               
               <div className="testimonial-author">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name} 
-                  className="author-image"
-                />
+                <div className="author-image">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
                 <div className="author-info">
                   <h4 className="author-name">{testimonial.name}</h4>
                   <p className="author-location">{testimonial.location}</p>

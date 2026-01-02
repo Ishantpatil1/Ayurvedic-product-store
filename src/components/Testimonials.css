@@ -89,8 +89,18 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
   border: 3px solid var(--color-secondary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-bg-light);
+  flex-shrink: 0;
+}
+
+.author-image svg {
+  width: 36px;
+  height: 36px;
 }
 
 .author-info {
