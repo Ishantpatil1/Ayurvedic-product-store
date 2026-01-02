@@ -47,10 +47,10 @@ function Contact() {
             <div className="info-card whatsapp-card">
               <div className="info-icon">💬</div>
               <h3>WhatsApp</h3>
-              <p className="contact-detail">+91 9604086984</p>
+              <p className="contact-detail">+91 9545103610</p>
               <button 
                 className="btn-contact"
-                onClick={() => window.open('https://wa.me/919604086984', '_blank')}
+                onClick={() => window.open('https://wa.me/919545103610', '_blank')}
               >
                 Chat on WhatsApp
               </button>
